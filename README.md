@@ -1,1 +1,1 @@
-"# My LeetCode journey" 
+# My LeetCode journey
