@@ -1,4 +1,3 @@
-#include <cmath>
 class Solution {
 public:
     bool isPalindrome(int x) {
@@ -6,31 +5,32 @@ public:
         if (x < 10) return true;
         if (x < 100) return x % 11 == 0;
 
-        long halfPartLeft{0};
-        long halfPartRight{0};
-        long numberOfDigits = getNumberOfDigits(x);
+        short leftDigit{0};
+        short rightDigit{0};
+        short digitsCount = getDigitsCount(x);
 
-        for (int i = 1; i <= numberOfDigits / 2; i++)
+        for (int i = 1; i <= digitsCount / 2; i++)
         {
-            halfPartLeft += static_cast<long>(x % static_cast<long>(pow(10, i)) / pow(10, i - 1)) * pow(10, numberOfDigits - i);
-            halfPartRight += static_cast<long>(x % static_cast<long>(pow(10, numberOfDigits - i + 1)) / pow(10, numberOfDigits - i)) * 
-                pow(10, numberOfDigits - i);
+            leftDigit = static_cast<int>(x % static_cast<int>(pow(10, i)) / pow(10, i - 1));
+            rightDigit = static_cast<int>(x % static_cast<long>(pow(10, digitsCount - i + 1)) / pow(10, digitsCount - i));
+
+            if (leftDigit != rightDigit) return false;
         }
 
-        return halfPartRight == halfPartLeft;
+        return true;
     }
 
-    int getNumberOfDigits(int number)
+    int getDigitsCount(int number)
     {
-        int numberOfDigits{1};
+        int digitsCount{1};
         long multiplier{10};
 
         while (number % multiplier != number)
         {
-            numberOfDigits++;
+            digitsCount++;
             multiplier *= 10;
         }
 
-        return numberOfDigits;
+        return digitsCount;
     }
 };
