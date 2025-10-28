@@ -1,0 +1,78 @@
+main.cpp
+
+# Compiled source files
+*.o
+*.obj
+*.lo
+*.slo
+*.out
+*.a
+*.lib
+*.so
+*.dylib
+*.dll
+*.exe
+
+# Precompiled headers
+*.gch
+*.pch
+
+# Debug / Release folders
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+build/
+Build/
+bin/
+Bin/
+lib/
+Lib/
+
+# CMake build directories
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+*.make
+install_manifest.txt
+compile_commands.json
+
+# Code::Blocks
+*.depend
+*.layout
+
+# Visual Studio
+.vs/
+*.vcxproj*
+*.sln
+*.user
+*.filters
+
+# CLion / JetBrains IDEs
+.idea/
+
+# Eclipse
+.project
+.cproject
+.settings/
+
+# macOS and Linux files
+.DS_Store
+*.swp
+*.swo
+
+# Windows files
+Thumbs.db
+ehthumbs.db
+
+# Logs and temp files
+*.log
+*.tmp
+
+# Coverage / Testing
+*.gcda
+*.gcno
+*.gcov
+*.profraw
+*.profdata
